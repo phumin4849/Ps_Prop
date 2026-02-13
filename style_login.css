@@ -1,0 +1,41 @@
+body{
+  font-family: "Mitr", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80vh;
+  min-height: 80vh;
+  background-color: rgb(240, 240, 240) ;
+}
+
+.wrapper{
+    background-color: rgb(255, 255, 255);
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.inputBox{
+    margin-bottom: 1rem;
+}
+.inputBox input{
+    height: 1.9rem;
+    border-radius: 10px;
+    border: none;
+    background-color: whitesmoke;
+    padding-left: 1rem;
+}
+
+.logintext{
+    text-align: center;
+}
+
+.buttonBox{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonBox button{
+    width: 9rem;
+}
