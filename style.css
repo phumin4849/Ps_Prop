@@ -203,7 +203,7 @@ select {
 
 /* ปุ่ม */
 button {
-  background: linear-gradient(135deg, #5130f5, #0003ad);
+  background: linear-gradient(135deg, #330aff, #010375);
   color: white;
   border: none;
   border-radius: 14px;
