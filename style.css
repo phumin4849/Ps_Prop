@@ -222,6 +222,7 @@ button:hover {
 
 /* ข้อความสถานะ */
 .message {
+  color: #ffffff;
   margin-top: 14px;
   font-size: 15px;
   font-weight: 600;

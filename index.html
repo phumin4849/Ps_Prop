@@ -33,7 +33,7 @@
     <form id="bookingForm">
       <!-- แถวชื่อเล่น/สาขา + คณะ -->
       <div class="row name-faculty-row">
-        <input type="text" name="fullname" placeholder="ชื่อ-นามสกุ" required />
+        <input type="text" name="fullname" placeholder="ชื่อ-นามสกุล" required />
       </div>
 
       <select id="gender" name="gender">
@@ -139,37 +139,35 @@
 
     document.getElementById("bookingForm").addEventListener("submit", async function(e) {
       e.preventDefault();
-    
+
       const form = e.target;
       const message = document.getElementById("message");
       const button = form.querySelector("button");
-    
+
       button.classList.add("loading");
       message.textContent = "กำลังส่งข้อมูล...";
-    
+
       const formData = Object.fromEntries(new FormData(form).entries());
-    
+
       try {
         const res = await fetch(scriptURL, {
           method: "POST",
           body: JSON.stringify(formData),
           mode: "no-cors"   // ⭐ จุดสำคัญ แก้ error ได้แน่นอน
         });
-      
+
         // ถ้าส่งถึง Apps Script แล้ว ให้ถือว่าสำเร็จทันที
-        message.textContent = "ส่งข้อมูลสำเร็จ ✅";
+        message.textContent = "ส่งข้อมูลสำเร็จ ✅ "; 
+        message.textContent = "กรุณารอการ Confirm จากเเอดมินสักครู่ครับ";
         form.reset();
-      
+
       } catch (err) {
         message.textContent = "เชื่อมต่อไม่สำเร็จ ❌";
         console.error(err);
       }
-    
+
       button.classList.remove("loading");
     });
-
-
-
 
   </script>
 
