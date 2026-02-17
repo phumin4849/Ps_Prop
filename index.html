@@ -89,10 +89,13 @@
           <br>
 
           <div class="budget-box">
-            <label for="budget">งบประมาณขั้นต่ำ(บาท)</label>
+            <label for="budget">งบประมาณ(บาท)</label> 
 
             <div class="range-value">
               <span id="budgetValue">3000</span> บาท
+              <br>
+              <label for="budet">ต่ำ</label>
+              <label for="budet">สูง</label>
             </div>
 
             <input type="range" id="budget" name="budget" min="6000" max="15000" step="500" value="6000">
@@ -135,7 +138,7 @@
 
     // ส่งฟอร์มแบบ async
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxNdKaFkrSinHqIVEFzwKjU6SdqansIhWTGamkigciQ9itg7PFI70WI_yNFDph2yrmciQ/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwj36RrWHkMc_EMTgcYMM-SF32-Y2j-G6UvsMhe47Z5s-UU3aitAh0IL8NgnABrZBrd/exec";
 
     document.getElementById("bookingForm").addEventListener("submit", async function(e) {
       e.preventDefault();
@@ -158,7 +161,6 @@
 
         // ถ้าส่งถึง Apps Script แล้ว ให้ถือว่าสำเร็จทันที
         message.textContent = "ส่งข้อมูลสำเร็จ ✅ "; 
-        message.textContent = "กรุณารอการ Confirm จากเเอดมินสักครู่ครับ";
         form.reset();
 
       } catch (err) {
